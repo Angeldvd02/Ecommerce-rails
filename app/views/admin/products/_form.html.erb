@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :name %>
+    <%= form.label :name, "Nombre" %>
     <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :description %>
+    <%= form.label :description, "Descripcion" %>
     <%= form.text_area :description, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
@@ -27,31 +27,31 @@
         <%= image_tag image, class: "w-20 h-20 object-cover rounded-md" %>
       <% end %>
     <% end %>
-    <%= form.label :images %>
+    <%= form.label :images, "Cargar imagen" %>
     <%= form.file_field :images, multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :price %>
+    <%= form.label :price, "Precio" %>
     <%= form.number_field :price, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :category_id %>
+    <%= form.label :category_id, "Categoria" %>
     <%= form.collection_select :category_id, Category.order(:name), :id, :name, id: "category", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :active %>
+    <%= form.label :active, "Estado" %>
     <%= form.check_box :active, class: "block mt-2 h-5 w-5" %>
   </div>
-
+  
   <% unless admin_product.new_record? %>
     <div class="my-5">
-      <%= link_to "Product Stock", admin_product_stocks_path(admin_product), class: "underline" %>
+      <%= link_to "Stock", admin_product_stocks_path(admin_product), class: "underline" %>
     </div>
   <% end %>
-
+  
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>

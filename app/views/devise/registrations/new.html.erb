@@ -1,0 +1,35 @@
+<div class="container mx-auto p-6 mt-20 max-w-lg">
+<div class="text-center mt-4">
+  <h3 class="font-bold">Si ya tienes una cuenta puedes</h3>
+  <%= render "devise/shared/links", class: "text-gray-500 hover:underline py-2 rounded-md text-md font-medium underline" %>
+</div>
+  <div class="bg-white shadow-lg rounded-lg p-8">
+    <h2 class="text-2xl font-bold text-center mb-6">Se parte del cambio</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'space-y-4' }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      
+      <div class="space-y-1">
+        <%= f.label :email,"Correo", class: 'block text-sm font-medium text-gray-700' %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' %>
+      </div>
+
+      <div class="space-y-1">
+        <%= f.label :password,"Contraseña", class: 'block text-sm font-medium text-gray-700' %>
+        <% if @minimum_password_length %>
+          <em class="text-xs text-gray-500">(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", class: 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' %>
+      </div>
+
+      <div class="space-y-1">
+        <%= f.label :password_confirmation,"Confirmar contraseña", class: 'block text-sm font-medium text-gray-700' %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' %>
+      </div>
+
+      <div>
+        <%= f.submit "Registrate", class: 'w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
