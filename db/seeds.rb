@@ -16,7 +16,8 @@ Faker::Config.locale = 'es'
 10.times do
   Category.create!(
     name: Faker::Commerce.department,
-    description: Faker::Lorem.sentence
+    description: Faker::Lorem.sentence,
+    # image: Faker::LoremFlickr.image(size: "300x300", search_terms: ['clothing'])
   )
 end
 
@@ -25,6 +26,7 @@ end
   Product.create!(
     name: Faker::Commerce.product_name,
     description: Faker::Lorem.paragraph,
+    image: Faker::LoremFlickr.image(size: "300x300", search_terms: ['clothing']),
     price: Faker::Commerce.price(range: 100..1000),
     category_id: Category.pluck(:id).sample,
     active: [true, false].sample
