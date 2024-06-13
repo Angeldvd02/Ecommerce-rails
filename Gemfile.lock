@@ -125,6 +125,8 @@ GEM
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
+    faker (3.4.1)
+      i18n (>= 1.8.11, < 2)
     ffi (1.16.3)
     font-awesome-sass (6.5.1)
       sassc (~> 2.0)
@@ -175,6 +177,8 @@ GEM
     nokogiri (1.15.5-aarch64-linux)
       racc (~> 1.4)
     nokogiri (1.15.5-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.15.5-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
@@ -257,6 +261,7 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.6.9-aarch64-linux)
     sqlite3 (1.6.9-arm64-darwin)
+    sqlite3 (1.6.9-x86_64-darwin)
     sqlite3 (1.6.9-x86_64-linux)
     stimulus-rails (1.3.0)
       railties (>= 6.0.0)
@@ -265,6 +270,8 @@ GEM
     tailwindcss-rails (2.0.33-aarch64-linux)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.33-arm64-darwin)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.33-x86_64-darwin)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.33-x86_64-linux)
       railties (>= 6.0.0)
@@ -295,6 +302,7 @@ GEM
 PLATFORMS
   aarch64-linux
   arm64-darwin-22
+  x86_64-darwin-23
   x86_64-linux
 
 DEPENDENCIES
@@ -303,6 +311,7 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.9)
+  faker
   font-awesome-sass (~> 6.5.1)
   image_processing (~> 1.2)
   importmap-rails

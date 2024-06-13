@@ -4,11 +4,11 @@
   <% end %>
 
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Orders</h1>
-    <%= link_to "New order", new_admin_order_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <h1 class="font-bold text-4xl">Ordenes</h1>
+    <%= link_to "Nueva orden", new_admin_order_path, class: "rounded-lg py-3 px-5 bg-gray-600 text-white block font-medium" %>
   </div>
 
-  <h2>Unfulfilled Orders</h2>
+  <h2>Pedidos no cumplidos</h2>
   <div class="flex flex-col w-full">
     <div class="overlow-x-auto sm:mx-0.5 lg:mx-0.5">
       <div class="py-2 inline-block min-w-full">
@@ -26,7 +26,7 @@
                   Address
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">
-                  Total 
+                  Total
                 </th>
               </tr>
             </thead>
@@ -43,7 +43,7 @@
                     <%= o.address %>
                   </td>
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800">
-                    <%= o.total %>
+                    $<%= o.total %>
                   </td>
                 </tr>
               <% end %>
@@ -55,7 +55,7 @@
     </div>
   </div>
 
-  <h2>Fulfilled Orders</h2>
+  <h2>Pedidos Cumplidos</h2>
   <div class="flex flex-col w-full">
     <div class="overlow-x-auto sm:mx-0.5 lg:mx-0.5">
       <div class="py-2 inline-block min-w-full">
@@ -73,7 +73,7 @@
                   Address
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">
-                  Total 
+                  Total
                 </th>
               </tr>
             </thead>
@@ -90,7 +90,7 @@
                     <%= o.address %>
                   </td>
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800">
-                    <%= o.total %>
+                    $<%= o.total %>
                   </td>
                 </tr>
               <% end %>

@@ -1,11 +1,11 @@
 <div id="<%= dom_id order %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Customer email:</strong>
+    <strong class="block font-medium mb-1">Correo electronico del cliente:</strong>
     <%= order.customer_email %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Fulfilled:</strong>
+    <strong class="block font-medium mb-1">Cumplido:</strong>
     <%= order.fulfilled %>
   </p>
 
@@ -15,17 +15,21 @@
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Address:</strong>
+    <strong class="block font-medium mb-1">Direccion de envio:</strong>
     <%= order.address %>
   </p>
 
   <% if order.order_products.any? %>
-    <strong class="block font-medium mb-1">Products:</strong>
-    <% order.order_products.each do |op| %>
-      <%= op.product.name %> 
-      <%= op.size %>
-      <%= op.quantity %>
-    <% end %>
+    <strong class="block  mb-1">Productos:</strong>
+    <ul>
+      <% order.order_products.each do |op| %>
+        <li>
+          <strong class="block font-medium mb-1">Item: <%= op.product.name %></strong>
+          <strong class="block font-medium mb-1"> Talla: <%= op.size %> </strong>
+          <strong class="block font-medium mb-1"> Cantidad: <%= op.quantity %> </strong>
+        </li>
+      <% end %>
+    </ul>
   <% end %>
 
   <% if action_name != "show" %>
