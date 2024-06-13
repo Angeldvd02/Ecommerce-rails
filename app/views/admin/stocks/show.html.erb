@@ -1,4 +1,7 @@
-<div class="mx-auto md:w-2/3 w-full flex">
+<div class="container mx-auto p-6 mt-20 max-w-lg">
+  <p class="font-bold text-4xl">Información del stock</p>
+  <div class="bg-white shadow-lg rounded-lg p-8">
+<div class="md:w-2/3 w-full flex">
   <div class="mx-auto">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
@@ -6,10 +9,9 @@
 
     <%= render @admin_stock %>
 
-    <%= link_to "Edit this admin_stock", edit_admin_product_stock_path(@admin_stock), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this admin_stock", admin_product_stock_path(@admin_stock), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
-    <%= link_to "Back to admin_stocks", admin_product_stocks_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Editar", edit_admin_product_stock_path(@admin_stock), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Regresar", admin_product_stocks_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
+</div>
+</div>
 </div>

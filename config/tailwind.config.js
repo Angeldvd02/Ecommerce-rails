@@ -12,6 +12,10 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        'regal-blue': '#243c5a',
+        'blue': '#2f80ed',
+      },
     },
   },
   plugins: [
